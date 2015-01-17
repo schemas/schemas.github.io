@@ -20,13 +20,19 @@
       "type": "string"
     },
     "profile_location": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "description": {
       "type": "string"
     },
     "url": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "uri"
     },
     "entities": {
@@ -42,11 +48,13 @@
                 "properties": {
                   "url": {
                     "type": "string",
-                    "format": "uri",
-                    "pattern": "^https?://t\\.co/"
+                    "format": "uri"
                   },
                   "expanded_url": {
-                    "type": "string",
+                    "type": [
+                      "string",
+                      "null"
+                    ],
                     "format": "uri",
                     "description": "Original URL entered by user (resolved)"
                   },
@@ -81,11 +89,13 @@
                   "properties": {
                     "url": {
                       "type": "string",
-                      "format": "uri",
-                      "pattern": "^https?://t\\.co/"
+                      "format": "uri"
                     },
                     "expanded_url": {
-                      "type": "string",
+                      "type": [
+                        "string",
+                        "null"
+                      ],
                       "format": "uri",
                       "description": "Original URL entered by user (resolved)"
                     },
@@ -125,17 +135,22 @@
       "type": "integer"
     },
     "created_at": {
-      "type": "string",
-      "format": "date-time"
+      "type": "string"
     },
     "favourites_count": {
       "type": "integer"
     },
     "utc_offset": {
-      "type": "integer"
+      "type": [
+        "integer",
+        "null"
+      ]
     },
     "time_zone": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "geo_enabled": {
       "type": "boolean"
